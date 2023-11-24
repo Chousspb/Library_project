@@ -23,6 +23,10 @@ DEBUG=True
 docker-compose up --build
 Это создаст и запустит контейнеры для Django-приложения, Redis и RabbitMQ.
 
+5.1 Выполните миграции
+docker-compose exec web python manage.py migrate
+
+
 6. Откройте ваш браузер и перейдите по адресу http://localhost:8000, чтобы увидеть ваше приложение.
 
 Использование Django-приложения
