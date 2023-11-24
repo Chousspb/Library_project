@@ -5,9 +5,11 @@ from .serializers import BookSerializer, CustomUserSerializer
 from rest_framework import generics
 from library.tasks import send_welcome_email
 
+
 def book_list(request):
     books = Book.objects.all()
     return render(request, 'book_list.html', {'books': books})
+
 
 class BookListCreateView(generics.ListCreateAPIView):
     queryset = Book.objects.all()
