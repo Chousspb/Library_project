@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head>
     <title>Список книг</title>
 </head>
@@ -10,5 +10,11 @@
             <li>{{ book.title }} - {{ book.author }} ({{ book.year }}) - ISBN: {{ book.isbn }}</li>
         {% endfor %}
     </ul>
+
+
+    <a href="{% url 'admin:index' %}">Войти в админ-панель</a>
+    <br>
+    <br>
+    <a href="{% url 'user-registration' %}">Регистрация</a>
 </body>
 </html>
