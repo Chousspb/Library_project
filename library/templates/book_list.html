@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список книг</title>
+</head>
+<body>
+    <h2>Список книг</h2>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} - {{ book.author }} ({{ book.year }}) - ISBN: {{ book.isbn }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
